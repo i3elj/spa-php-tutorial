@@ -1,0 +1,43 @@
+#navigation-bar {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    place-content: space-between;
+    margin: var(--app-margin) 28px;
+}
+
+#navigation-bar > div {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#navigation-bar > div > #link-underline {
+    position: absolute;
+    height: 2px;
+    width: 46px;
+    top: 49px;
+    border-radius: 2px;
+    background-color: black;
+    transition: 500ms;
+}
+
+#navigation-bar > div > label > input {
+    display: none;
+}
+
+#navigation-bar > div > label > span {
+    font-weight: 500;
+}
+
+/* #navigation-bar > div > label > input:checked + span { */
+/*     border-bottom: 2px solid black; */
+/* } */
+
+#app {;
+    flex: 1;
+    padding: 40px;
+    margin: var(--app-margin);
+    border-radius: 20px;
+    background-color: #efefef;	
+}
