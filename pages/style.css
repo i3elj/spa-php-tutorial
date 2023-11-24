@@ -3,7 +3,6 @@
     flex-direction: row;
     place-items: center;
     place-content: space-between;
-    margin: var(--app-margin) 28px;
 }
 
 #navigation-bar > div {
@@ -28,16 +27,50 @@
 
 #navigation-bar > div > label > span {
     font-weight: 500;
+    cursor: pointer;
 }
 
-/* #navigation-bar > div > label > input:checked + span { */
-/*     border-bottom: 2px solid black; */
-/* } */
-
-#app {;
+#app-wrapper {
+    display: flex;
+    flex-direction: column;
+    place-items: start;
     flex: 1;
     padding: 40px;
-    margin: var(--app-margin);
     border-radius: 20px;
-    background-color: #efefef;	
+    background-color: #efefef;
+    overflow: hidden;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    place-items: start;
+    transform-origin: left;
+    width: 100%;
+}
+
+.appear {
+    animation: appear 600ms;
+}
+
+@keyframes appear {
+    0% {
+	transform: scale(0);
+    }
+    100% {
+	transform: scale(1);
+    }
+}
+
+.shift {
+    animation: slidein 800ms;
+}
+
+@keyframes slidein {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(150%);
+  }
 }
