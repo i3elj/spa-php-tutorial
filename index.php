@@ -1,28 +1,23 @@
 <?php
 
-function dd(...$args)
-{
-      echo "<pre>";
-      var_dump(...$args);
-      echo "</pre>";
-      die();
-}
+require_once "lib.php";
 
 $path = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 $routes = [
-      ['path' => '/', 'page' => 'pages/home.php']
+      ['path' => '/home', 'page' => 'pages/home/index.php'],
+      ['path' => '/contact', 'page' => 'pages/contact/index.php'],
+      ['path' => '/thankyou', 'page' => 'pages/thankyou/index.php'],
 ];
+
+if ($path == '/') require_page('pages/app.php');
 
 foreach ($routes as $route)
 {
-
-      if ($path == '/' && $_SERVER['REQUEST_METHOD'] == 'POST') echo '<h1>Hello Home</h1>';
-      if ($path == '/contact' && $_SERVER['REQUEST_METHOD'] == 'POST' ) echo '<h1>Contact Us</h1>';
-      if ($path == '/thankyou' && $_SERVER['REQUEST_METHOD'] == 'POST') echo '<h1>Thank you</h1>';
-
-      if ($path == $route['path'] && $_SERVER['REQUEST_METHOD'] == 'GET') {
-	    require_once $route['page'];
+      if ($path == $route['path']) {
+	    match($_SERVER['REQUEST_METHOD']) {
+		  'POST' => require_page($route['page']),
+		  default => _404(),
+	    };
       }
-      exit(0);
 }

@@ -1,6 +1,7 @@
 :root {
     --app-margin: 20px;
 }
+
 * {
     margin: 0px;
     padding: 0px;
@@ -12,4 +13,10 @@ body, html {
     flex-direction: column;
     min-height: 100vh;
     min-width: 100vw;
+    box-sizing: border-box;
+}
+
+body {
+    padding: var(--app-margin);
+    gap: 20px;
 }
