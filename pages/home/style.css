@@ -1,0 +1,157 @@
+.section {
+    display: flex;
+    width: 100%;
+    padding: 8rem 0;
+}
+
+section#first-section {
+    flex-direction: row;
+    place-items: center;
+    place-content: center;
+    gap: 10vw;
+}
+
+section#first-section > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section#first-section > div > h2 {
+    font-size: 62px;
+}
+
+section#first-section > div > p {
+    font-size: 22px;
+    width: 90%;
+}
+
+.section-button {
+    margin-top: 10px;
+    height: 32px;
+    width: 32%;
+    border: 1px solid black;
+    border-radius: 8px;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 300ms ease;
+}
+
+.section-button:hover {
+    background-color: black;
+    color: white;
+}
+
+section#first-section > img {
+    width: 32vw;
+    border-radius: 20px;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+}
+
+section#second-section {
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    gap: 40px;
+    color: white;
+    background-color: black;
+    box-shadow: 100px 0 0 0 black, -100px 0 0 0 black;
+}
+
+section#second-section > div {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    place-content: center;
+    gap: 15%;
+    width: 100%;
+}
+
+section#second-section > div > .points {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+section#second-section > div > .points > .icons {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    min-height: 70px;
+}
+
+section#third-section {
+    flex-direction: column;
+    place-items: center;
+    gap: 6rem;
+}
+
+section#third-section > div {
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+    gap: 10%;
+}
+
+section#third-section > div > h2 {
+    font-size: 62px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+section#third-section > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section#third-section > div > div > div {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    gap: 1rem;
+}
+
+details {
+  padding: 0.5em 0.5em 0;
+  font-size: 16px;
+  border: 1px solid black;
+}
+
+summary {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    gap: 1rem;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  margin-bottom: 0.5em;
+}
+
+section#third-section summary::marker {
+    display: none;
+    content:"";
+}
+
+section#third-section summary > img {
+    width: 2rem;
+}
+
+section#third-section .section-button {
+    height: 4rem;
+    width: 12rem;
+}

@@ -1,0 +1,24 @@
+section#contact-form {
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    gap: 20px;
+}
+
+section#contact-form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section#contact-form > div > input,
+section#contact-form > div > textarea {
+    padding: .5rem;
+    border: 1px solid grey;
+    outline: none;
+}
+
+section#contact-form > div > input:focus,
+section#contact-form > div > textarea:focus {
+    outline: 1px solid black;
+}

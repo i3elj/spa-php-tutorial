@@ -1,0 +1,32 @@
+#navigation-bar {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    place-content: space-between;
+    padding: 1rem 2rem;
+}
+
+#navigation-bar > #links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#navigation-bar > #links > #link-underline {
+    position: absolute;
+    height: 2px;
+    width: 46px;
+    top: 4rem;
+    border-radius: 2px;
+    background-color: black;
+    transition: 500ms;
+}
+
+#navigation-bar > #links > label > input {
+    display: none;
+}
+
+#navigation-bar > #links > label > span {
+    font-weight: 500;
+    cursor: pointer;
+}

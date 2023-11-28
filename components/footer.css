@@ -1,0 +1,18 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    place-content: space-between;
+    padding: 80px;
+}
+
+footer > div {
+    display: flex;
+    flex: 1;
+    place-content: center;
+    gap: 20px;
+}
+
+#footer-logo {
+    flex-direction: column;
+    place-items: center;
+}
