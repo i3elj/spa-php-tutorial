@@ -14,10 +14,8 @@ if ($path == '/') require_page('pages/app.php');
 
 foreach ($routes as $route)
 {
-      if ($path == $route['path']) {
-	    match($_SERVER['REQUEST_METHOD']) {
-		  'POST' => require_page($route['page']),
-		  default => _404(),
-	    };
-      }
+      if ($path == $route['path'])
+	    require_page($route['page']);
 }
+
+_404();
