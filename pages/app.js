@@ -5,7 +5,7 @@ function appear() {
     return true
 }
 
-function eventTest() {
+function shift() {
     let app = document.querySelector("#app")
     app.classList.add("shift")
     setTimeout(() => {
