@@ -6,6 +6,8 @@
     margin: 0px;
     padding: 0px;
     font-family: "Cantarell";
+	box-sizing: border-box;
+	min-width: 0;
 }
 
 body, html {

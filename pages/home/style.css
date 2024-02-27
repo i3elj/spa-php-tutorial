@@ -5,6 +5,8 @@
 }
 
 section#first-section {
+	display: flex;
+	flex-wrap: wrap;
     flex-direction: row;
     place-items: center;
     place-content: center;
@@ -14,11 +16,13 @@ section#first-section {
 section#first-section > div {
     display: flex;
     flex-direction: column;
+	place-items: center;
+	text-align: center;
     gap: 10px;
 }
 
 section#first-section > div > h2 {
-    font-size: 62px;
+    font-size: clamp(48px, 10vw, 62px);
 }
 
 section#first-section > div > p {
@@ -45,7 +49,7 @@ section#first-section > div > p {
 }
 
 section#first-section > img {
-    width: 32vw;
+	width: clamp(500px, 32vw, 1000px);
     border-radius: 20px;
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
 }
@@ -54,7 +58,7 @@ section#second-section {
     flex-direction: column;
     place-items: center;
     place-content: center;
-    gap: 40px;
+    gap: 4rem;
     color: white;
     background-color: black;
     box-shadow: 100px 0 0 0 black, -100px 0 0 0 black;
@@ -62,10 +66,11 @@ section#second-section {
 
 section#second-section > div {
     display: flex;
+	flex-wrap: wrap;
     flex-direction: row;
     place-items: center;
     place-content: center;
-    gap: 15%;
+    gap: 4rem;
     width: 100%;
 }
 
@@ -93,9 +98,10 @@ section#third-section {
 
 section#third-section > div {
     display: flex;
+	flex-wrap: wrap;
     flex-direction: row;
     place-content: center;
-    gap: 10%;
+    gap: clamp(2rem, 6vw, 4rem);
 }
 
 section#third-section > div > h2 {
@@ -104,13 +110,13 @@ section#third-section > div > h2 {
     margin-top: 2rem;
 }
 
-section#third-section > div > div {
+section#third-section > div > #questions {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-section#third-section > div > div > div {
+section#third-section > div > #questions > div {
     display: flex;
     flex-direction: row;
     place-items: center;
@@ -118,9 +124,9 @@ section#third-section > div > div > div {
 }
 
 details {
-  padding: 0.5em 0.5em 0;
-  font-size: 16px;
-  border: 1px solid black;
+	padding: 0.5em 0.5em 0;
+	font-size: 16px;
+	border: 1px solid black;
 }
 
 summary {
@@ -135,11 +141,11 @@ summary {
 }
 
 details[open] {
-  padding: 0.5em;
+	padding: 0.5em;
 }
 
 details[open] summary {
-  margin-bottom: 0.5em;
+	margin-bottom: 0.5em;
 }
 
 section#third-section summary::marker {
